@@ -6,7 +6,7 @@ import pandas as pd
 
 dataset = pd.read_csv("world cup new2.csv")
 
-st.set_page_config(page_title="T20 World Cup Data Analysis",page_icon="🏟")
+st.set_page_config(page_title="T20 World Cup Data Analysis",page_icon="🏟",layout="wide")
 
 with st.sidebar:
     selected = option_menu(
@@ -18,7 +18,15 @@ with st.sidebar:
 
 
 if selected == "Home🏠":
-    st.write(dataset)
+  st.title(" ✨ Welcome to Our  website ✨")
+  st.markdown("---------")
+  video_url = "video.mp4"
+  st.image(["img2.jpg"])
+  st.markdown("The ICC Men's T20 World Cup (formerly the ICC World Twenty20) is the Twenty20 International cricket tournament, organised by the International Cricket Council (ICC) since 2007.The event has generally been held every two years. In May 2016, the ICC put forward the idea of having a tournament in 2018, with South Africa being the possible host,[2] but the ICC later dropped the idea of a 2018 edition at the conclusion of the 2017 ICC Champions Trophy.[3] The 2020 edition of the tournament was scheduled to take place but due to the COVID-19 pandemic, the tournament was postponed until 2021, with the intended host changed to India. The 2021 ICC Men's T20 World Cup was later relocated to the United Arab Emirates (UAE) and Oman[4] due to problems relating to the COVID-19 pandemic in India, taking place 5 years after the previous (2016) iteration.")
+  st.image(["img1.jpg"])
+  st.markdown("The International Cricket Council's executive committee votes for the hosts of the tournament after examining bids from the nations which have expressed an interest in holding the event. After South Africa in 2007, the tournament was hosted by England, the West Indies and Sri Lanka in 2009, 2010 and 2012 respectively. Bangladesh hosted the tournament in 2014.[38] India hosted the tournament in 2016. After a gap of five years, India won the hosting rights of 2021 edition as well, but due to COVID-19 pandemic the matches were played in Oman and the United Arab Emirates.")
+  st.video(video_url, start_time=0)
+  st.markdown("The ICC Men's T20 World Cup (formerly the ICC World Twenty20) is the Twenty20 International cricket tournament, organised by the International Cricket Council (ICC) since 2007.")
 
 star=0
 if selected=="Projects📚":
