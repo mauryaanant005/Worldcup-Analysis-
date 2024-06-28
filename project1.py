@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 import numpy as np
 import pandas as pd
 
-dataset = pd.read_csv("C:/anant/world cup new2.csv")
+dataset = pd.read_csv("world cup new2.csv")
 
 
 st.set_page_config(page_title="T20 World Cup Data Analysis",page_icon="🏟")
