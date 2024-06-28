@@ -4,15 +4,14 @@ from streamlit_option_menu import option_menu
 import numpy as np
 import pandas as pd
 
-dataset = pd.read_csv("world cup new2.csv")
-
+dataset = pd.read_csv("C:/anant/world cup new2.csv")
 
 st.set_page_config(page_title="T20 World Cup Data Analysis",page_icon="🏟")
 
 with st.sidebar:
     selected = option_menu(
         menu_title='Menu 📁',
-        options=["Home🏠", "Projects📚", "Search🔍", "About us🪪","Contacts📞"]
+        options=["Home🏠", "Projects📚", "Search🔍","Attributes📒", "About us🪪","Contacts📞"]
     )
 
 
@@ -131,6 +130,17 @@ if selected == "Search🔍":
        time=dataset[dataset['Date']==date]
        if not time.empty:
           st.write(time[['Match Between','Winner Team','Losing Team']])
+
+if selected == "Attributes📒":
+    column_names = dataset.columns
+    label = "Select columns to display"
+    selected_columns = st.multiselect(label,column_names)
+    
+    if selected_columns:
+        st.write("Selected columns data:")
+        st.dataframe(dataset[selected_columns])
+    else:
+        st.write("Please select columns to display the data.")      
     
 
 
