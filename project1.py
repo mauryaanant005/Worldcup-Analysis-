@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 
 
-dataset = pd.read_csv("world cup new2.csv")
+dataset = pd.read_csv("H:/python intern/world cup new2.csv")
 
 st.set_page_config(page_title="T20 World Cup Data Analysis", page_icon="🏟", layout="wide")
 
@@ -156,16 +156,17 @@ if selected == "About us🪪":
     st.markdown("Location : Mumbai 🗺️")
 
 if selected == "Contacts📞":
-    st.subheader("Contact Details")
-    st.markdown("*Name:* Anant Maurya")
+    st.title("Contact Details")
+    st.markdown("---------")
+    st.subheader("*Name:* Anant Maurya")
     st.markdown("*Phone No:* 9152990014")
     st.markdown("[*GitHub Profile*](https://github.com/mauryaanant005)")
-    st.markdown("*Name:* Rayyan Bhati")
-    st.markdown("*Phone No:* 8779811107")
-    st.markdown("[*GitHub Profile*](https://github.com/RAYYAN2906)")
-    st.markdown("*Name:* Anas Malkani")
+    st.subheader("*Name:* Anas Malkani")
     st.markdown("*Phone No:* 7039372198")
     st.markdown("[*GitHub Profile*](https://github.com/ANASMALKANI189)")
-    st.markdown("*Name:* Manas Londhe")
+    st.subheader("*Name:* Rayyan Bhati")
+    st.markdown("*Phone No:* 8779811107")
+    st.markdown("[*GitHub Profile*](https://github.com/RAYYAN2906)")
+    st.subheader("*Name:* Manas Londhe")
     st.markdown("*Phone No:* 8850205475")
     st.markdown("[*GitHub Profile*](https://github.com/GamerMANAS09)")
